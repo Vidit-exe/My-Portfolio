@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Input, Button, Typography } from "@material-tailwind/react";
 import { getImagePrefix } from "../../utils/utils";
 import { useRef, useState } from "react";
+import TncModal from "../components/TncModal"
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxAVwtdVScxQm57irDL9Uh8JmQGM9a7tYlmGV6bDc-dZuvobNY82t9ZmkCrVx-4ook1/exec";
@@ -38,7 +39,7 @@ function Hero() {
 
   return (
     <header className="p-8">
-      <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2">
+      <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2 justify-between">
         <div className="row-start-2 lg:row-auto">
           <Typography
             variant="h1"
@@ -50,7 +51,7 @@ function Hero() {
             variant="lead"
             className="mb-4 md:pr-16 xl:pr-28"
           >
-            I&apos;m Vidit Joshi, a passionate developer based in India. Here,
+            I&apos;m Vidit, a passionate developer based in India. Here,
             you&apos;ll get a glimpse of my journey in the world of
             development, where creativity meets functionality.
           </Typography>
@@ -97,21 +98,22 @@ function Hero() {
             )}
           </div>
           {/* FORM END */}
-
-          <Typography variant="small" className="font-normal !text-gray-500 mt-4">
-            Read my{" "}
-            <a href="#" className="font-medium underline transition-colors">
-              Terms and Conditions
-            </a>
-          </Typography>
+          <div>
+            <Typography variant="small" className="font-normal !text-gray-500 mt-4">
+              Read my{" "}
+              <a className="font-medium underline transition-colors">
+                <TncModal/>
+              </a>
+            </Typography>
+          </div>
         </div>
 
         <Image
-          width={786}
-          height={786}
+          width={1024}
+          height={1024}
           alt="team work"
           src={`${getImagePrefix()}image/avatar4.jpg`}
-          className="w-full rounded-xl object-cover"
+          className="w-[95%] rounded-xl h-[786px]"
         />
       </div>
     </header>

@@ -94,34 +94,40 @@ export function ContactForm() {
                 joshividit11@gmail.com
               </Typography>
             </div>
-            <div className="flex items-center gap-5 mr-64">
-              <IconButton
-                variant="text"
-                className="text-white dark:text-gray-900"
-                onClick={() =>
-                  (window.location.href = "https://www.instagram.com/j_viditttt")
-                }
-              >
-                <FaInstagram className="text-xl" />
-              </IconButton>
-              <IconButton
-                variant="text"
-                className="text-white dark:text-gray-900"
-                onClick={() =>
-                  (window.location.href = "https://x.com/ViditJoshi83058")
-                }
-              >
-                <FaXTwitter className="text-xl" />
-              </IconButton>
-              <IconButton
-                variant="text"
-                className="text-white dark:text-gray-900"
-                onClick={() =>
-                  (window.location.href = "https://github.com/Vidit-exe")
-                }
-              >
-                <FaGithub className="text-lg" />
-              </IconButton>
+            <div className="flex items-center lg:gap-5 gap-10 lg:-ml-1 ml-3 mr-64">
+              <a href="https://www.instagram.com/j_viditttt">
+                <IconButton
+                  variant="text"
+                  className="text-white dark:text-gray-900"
+                  onClick={() =>
+                    (window.location.href = "https://www.instagram.com/j_viditttt")
+                  }
+                >
+                  <FaInstagram className="text-2xl" />
+                </IconButton>
+              </a>
+              <a href="https://x.com/ViditJoshi83058">
+                <IconButton
+                  variant="text"
+                  className="text-white dark:text-gray-900"
+                  onClick={() =>
+                    (window.location.href = "https://x.com/ViditJoshi83058")
+                  }
+                >
+                  <FaXTwitter className="text-2xl" />
+                </IconButton>
+              </a>
+              <a href="https://github.com/Vidit-exe">
+                <IconButton
+                  variant="text"
+                  className="text-white dark:text-gray-900"
+                  onClick={() =>
+                    (window.location.href = "https://github.com/Vidit-exe")
+                  }
+                >
+                  <FaGithub className="text-2xl" />
+                </IconButton>
+              </a>
             </div>
           </div>
 
@@ -146,7 +152,7 @@ export function ContactForm() {
                   required
                 />
                 <Input
-                  color="white"
+                  color="gray"
                   size="lg"
                   variant="static"
                   label="Last Name"

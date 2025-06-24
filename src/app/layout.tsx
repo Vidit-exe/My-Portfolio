@@ -11,8 +11,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js + Tailwind Portfolio Page",
-  description: "Introducing Tailwind Portfolio Page with dark mode toggle.",
+  title: "Vidit's Portfolio",
+  description: "Vidit's Portfolio",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
           data-site="YOUR_DOMAIN_HERE"
           src="https://api.nepcha.com/js/nepcha-analytics.js"
         ></script>
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/portfolio-logo.png" type="image/png" />
       </head>
       <body className={`${roboto.className} bg-white text-black dark:bg-gray-900 dark:text-white`}>
         <ThemeProvider>

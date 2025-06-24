@@ -21,7 +21,7 @@ import { SkillCard } from "@/components";
 const SKILLS = [
   {
     icon: RectangleGroupIcon,
-    title: "Frontend Web Development:",
+    title: "Full-Stack Web Development:",
     children:
       "Creating beautiful and functional web experiences is my forte. Using the latest technologies and best practices, I design and build websites that captivate and engage users.",
   },

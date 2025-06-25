@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 import TncModal from "../components/TncModal"
 
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbxAVwtdVScxQm57irDL9Uh8JmQGM9a7tYlmGV6bDc-dZuvobNY82t9ZmkCrVx-4ook1/exec";
+  "https://script.google.com/macros/s/AKfycbwIXv74kwVE8SUC5COQwQRFIcDoPtzmzjTNRmjdT9bsbFirTsFn1MEFGR0opLsrRnxViw/exec";
 
 function Hero() {
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -15,25 +15,34 @@ function Hero() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+  
     try {
       const form = formRef.current;
       if (!form) return;
-
+  
       const response = await fetch(scriptURL, {
         method: "POST",
         body: new FormData(form),
       });
-
+  
       if (response.ok) {
         setStatus("success");
         form.reset();
+        setTimeout(() => {
+          setStatus(null)
+        }, 3000);
       } else {
         setStatus("error");
+        setTimeout(() => {
+          setStatus(null);
+        }, 3000);
       }
     } catch (error) {
       console.error("Submission Error:", error);
       setStatus("error");
+      setTimeout(() => {
+        setStatus(null);
+      }, 3000);
     }
   };
 

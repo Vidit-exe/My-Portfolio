@@ -16,35 +16,45 @@ import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbxAVwtdVScxQm57irDL9Uh8JmQGM9a7tYlmGV6bDc-dZuvobNY82t9ZmkCrVx-4ook1/exec";
+  "https://script.google.com/macros/s/AKfycbykm5CIFkJsuC1MgdNFPqd_UcUlGtfLAjr331rENveK-1-MHxJi7AUPDj39vadFknAO/exec";
 
 export function ContactForm() {
   const formRef = useRef<HTMLFormElement | null>(null);
   const [status, setStatus] = useState<"success" | "error" | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      const form = formRef.current;
-      if (!form) return;
+  try {
+    const form = formRef.current;
+    if (!form) return;
 
-      const response = await fetch(scriptURL, {
-        method: "POST",
-        body: new FormData(form),
-      });
+    const response = await fetch(scriptURL, {
+      method: "POST",
+      body: new FormData(form),
+    });
 
-      if (response.ok) {
-        setStatus("success");
-        form.reset();
-      } else {
-        setStatus("error");
-      }
-    } catch (error) {
-      console.error("Submission Error:", error);
+    if (response.ok) {
+      setStatus("success");
+      form.reset();
+      setTimeout(() => {
+        setStatus(null)
+      }, 3000);
+    } else {
       setStatus("error");
+      setTimeout(() => {
+        setStatus(null);
+      }, 3000);
     }
-  };
+  } catch (error) {
+    console.error("Submission Error:", error);
+    setStatus("error");
+    setTimeout(() => {
+      setStatus(null);
+    }, 3000);
+  }
+};
+
 
   return (
     <section className="py-28 px-8">

@@ -57,7 +57,7 @@ const Tnc = () => {
     <i>Thank you for visiting my portfolio! :)</i>
   `
   return (
-    <div className="pt-5 pl-2 text-sm text-gray-800 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed">
+    <div className="pt-5 pl-2 text-sm text-gray-900 dark:text-white max-w-3xl mx-auto leading-relaxed">
       <div
         dangerouslySetInnerHTML={{
           __html: statement,

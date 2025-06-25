@@ -110,10 +110,10 @@ function Hero() {
 
         <Image
           width={1024}
-          height={1024}
-          alt="team work"
+          height={750}
+          alt="Vidit"
           src={`${getImagePrefix()}image/avatar4.jpg`}
-          className="w-[95%] rounded-xl h-[786px]"
+          className="w-[95%] rounded-xl lg:h-[650px] lg:w-[75%] mx-auto"
         />
       </div>
     </header>

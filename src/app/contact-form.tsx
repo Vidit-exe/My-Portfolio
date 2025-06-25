@@ -12,7 +12,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import { FaInstagram, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const scriptURL =
@@ -94,7 +94,7 @@ export function ContactForm() {
                 joshividit11@gmail.com
               </Typography>
             </div>
-            <div className="flex items-center lg:gap-5 gap-10 lg:-ml-1 ml-3 mr-64">
+            <div className="flex items-center lg:gap-5 gap-2 lg:-ml-1 -ml-2 mr-64">
               <a href="https://www.instagram.com/j_viditttt">
                 <IconButton
                   variant="text"
@@ -126,6 +126,17 @@ export function ContactForm() {
                   }
                 >
                   <FaGithub className="text-2xl" />
+                </IconButton>
+              </a>
+              <a href="https://www.linkedin.com/in/vidit-j-344064244">
+                <IconButton
+                  variant="text"
+                  className="text-white dark:text-gray-900"
+                  onClick={() =>
+                    (window.location.href = "https://www.linkedin.com/in/vidit-j-344064244")
+                  }
+                >
+                  <FaLinkedin className="text-2xl" />
                 </IconButton>
               </a>
             </div>

@@ -34,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "src/components/tnc.js", "src/app/resume.jsx"  ],
+, "src/components/tnc.js", "src/app/resume.jsx", "src/components/TncModal.jsx"  ],
   "exclude": [
     "node_modules"
   ]

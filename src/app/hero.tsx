@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { Input, Button, Typography } from "@material-tailwind/react";
 import { getImagePrefix } from "../../utils/utils";
-import { useRef, useState } from "react";
-import TncModal from "../components/TncModal"
+import { useRef, useState } from "react";import dynamic from "next/dynamic";
+const TncModal = dynamic(() => import("../components/TncModal"), { ssr: false });
+
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbwIXv74kwVE8SUC5COQwQRFIcDoPtzmzjTNRmjdT9bsbFirTsFn1MEFGR0opLsrRnxViw/exec";

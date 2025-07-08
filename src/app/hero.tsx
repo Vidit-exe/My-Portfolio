@@ -84,6 +84,7 @@ function Hero() {
                   label="Enter your email"
                   size="lg"
                   name="Enquiry_email"
+                  required
                 />
                 <Button
                   type="submit"

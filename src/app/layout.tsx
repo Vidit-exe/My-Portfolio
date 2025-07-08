@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Layout, FixedPlugin } from "@/components";
 import { ThemeProvider } from "../../context/ThemeContext";
+import Analytics from "@/components/Analytics";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -85,6 +86,7 @@ export default function RootLayout({
             {children}
             <FixedPlugin />
           </Layout>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
